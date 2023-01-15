@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 header,
 .content,
 .content > *,
@@ -10,6 +12,9 @@ body {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     height: 100vh;
+    min-width: 400px;
+    min-height: 500px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .content {

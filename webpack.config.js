@@ -1,13 +1,16 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-    mode: 'development',
+    mode: "development",
     entry: {
-        todo: './src/todo.js',
+        todo: "./src/todo.js"
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'todo.bundle.js'
+        path: path.resolve(__dirname, "dist"),
+        filename: "todo.bundle.js"
     },
-    devtool: 'inline-source-map',
-  };
+    module: {
+        rules: [{ test: /\.css$/i, use: ["style-loader", "css-loader"] }]
+    },
+    devtool: "inline-source-map"
+};

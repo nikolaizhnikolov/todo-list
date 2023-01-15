@@ -3,14 +3,14 @@ const path = require("path");
 module.exports = {
     mode: "development",
     entry: {
-        todo: "./src/todo.js"
+        todo: "./src/todo.js",
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "todo.bundle.js"
+        filename: "todo.bundle.js",
     },
     module: {
-        rules: [{ test: /\.css$/i, use: ["style-loader", "css-loader"] }]
+        rules: [{ test: /\.css$/i, use: ["style-loader", "css-loader"] }],
     },
-    devtool: "inline-source-map"
+    devtool: "inline-source-map",
 };

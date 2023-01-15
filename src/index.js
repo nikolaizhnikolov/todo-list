@@ -1,4 +1,5 @@
 import { footer } from "./components/footer/footer";
+import { header } from "./components/header/header";
 import cssReset from "./reset.css";
 import css from "./style.css";
 
@@ -9,9 +10,7 @@ import css from "./style.css";
         return div;
     };
 
-    const header = document.createElement("header");
-    header.textContent = "To-Do Be Do Bee Do";
-    document.body.appendChild(header);
+    document.body.appendChild(header());
 
     const content = divWithClass("content");
     content.appendChild(divWithClass("projects"));

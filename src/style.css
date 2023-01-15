@@ -8,13 +8,17 @@ footer {
     border: solid thin black;
 }
 
+:root {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
 body {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     height: 100vh;
     min-width: 400px;
     min-height: 500px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .content {

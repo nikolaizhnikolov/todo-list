@@ -1,0 +1,11 @@
+.project {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem 1rem; 
+}
+
+.project:hover {
+    cursor: pointer;
+    background-color: gray;
+}

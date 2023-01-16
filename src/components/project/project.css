@@ -5,6 +5,11 @@
     padding: 0.5rem 1rem; 
 }
 
+.project > .logo {
+    content: url('./folder.png');
+    width: 36px;    
+}
+
 .project:hover {
     cursor: pointer;
     background-color: lightgray;
@@ -12,4 +17,8 @@
 
 .project--open {
     background-color: gray;
+}
+
+.project--open > .logo {
+    content: url('./folderOpen.png');
 }

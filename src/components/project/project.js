@@ -1,4 +1,6 @@
 import style from "./project.css";
+import folder from "./folder.png";
+import folderOpen from "./folderOpen.png"
 
 const project = function (name, todos) {
     const p = Object.create(null);
@@ -12,10 +14,20 @@ const projects = [project("Todos", []), project("Project 2", [])];
 const projectComponent = function (project) {
     const container = document.createElement("div");
     container.classList.add("project");
-    container.textContent = project.name;
     container.onclick = () => {
         console.log(project.name);
     };
+
+    const logo = document.createElement("img")
+    logo.classList.add("logo");
+    logo.src = folder;
+
+    const text = document.createElement("div");
+    text.textContent = project.name;
+
+    container.appendChild(logo);
+    container.appendChild(text);
+
     return container;
 };
 

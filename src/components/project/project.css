@@ -10,15 +10,6 @@
     background-color: lightgray;
 }
 
-.project::before{
-    content: url('./folder.png');
-    padding-right: 5px;
-}
-
 .project--open {
     background-color: gray;
-}
-
-.project--open::before{
-    content: url('./folderOpen.png');
 }

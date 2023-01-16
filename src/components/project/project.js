@@ -7,20 +7,20 @@ const project = function (name, todos) {
     return p;
 };
 
-const testProjects = [project("default", []), project("Test", [])];
+const projects = [project("Todos", []), project("Project 2", [])];
 
 const projectComponent = function (project) {
-    const p = document.createElement("div");
-    p.classList.add("project");
-    p.textContent = project.name;
-    p.onclick = () => {
+    const container = document.createElement("div");
+    container.classList.add("project");
+    container.textContent = project.name;
+    container.onclick = () => {
         console.log(project.name);
     };
-    return p;
+    return container;
 };
 
 export const getAllProjects = () => {
     const projectComponents = [];
-    testProjects.forEach(p => projectComponents.push(projectComponent(p)));
+    projects.forEach(p => projectComponents.push(projectComponent(p)));
     return projectComponents;
 }

@@ -1,5 +1,5 @@
 import style from "./project.css";
-import { projects } from "../../storage";
+import { allProjects } from "../../storage";
 
 const projectComponent = function (project) {
     const container = document.createElement("div");
@@ -25,16 +25,17 @@ export const projectsComponent = () => {
     container.classList.add("projects");
     
     let active = null;
-    projects.forEach((p) => {
+    allProjects.forEach((p) => {
         const component = projectComponent(p);
         component.onclick = () => {
-            component.classList.add("project--open");
             active.classList.remove("project--open");
             active = component;
+            component.classList.add("project--open");
         }
         container.appendChild(component);
     })
     active = container.firstChild;
+    active.classList.add("project--open");
 
     return container;
 }

@@ -1,3 +1,9 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-size: 20px;
+}
+
 .projects,
 .todos {
     padding: 12px;

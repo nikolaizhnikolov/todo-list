@@ -1,3 +1,14 @@
-.projects {
+.projects,
+.todos {
     padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    gap: 12px;
+}
+
+.todos {
+    gap: 4px;
 }

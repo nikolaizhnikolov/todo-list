@@ -1,0 +1,25 @@
+.todo {
+    display: grid;
+    grid-template-columns: 30px 5fr 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    padding: 4px;
+}
+
+.todo:hover {
+    background-color: lightgray;
+}
+
+.todo__checkbox {
+    content: url("./checkbox.png");
+    width: 30px;
+}
+
+.todo__name {
+}
+
+.todo__priority {
+}
+
+.todo__date {
+}

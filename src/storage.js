@@ -5,5 +5,21 @@ export const project = function (name, todos) {
     return p;
 };
 
-export const projects = [project("Todos", []), project("Project 2", [])];
-//export const todos = [];
+export const todo = function (name, priority, date) {
+    const t = Object.create(null);
+    t.name = name;
+    t.priority = priority;
+    t.date = date;
+    return t;
+}
+
+let randomTodos = [todo("make todos", "high", "today")];
+let randomProject = project("Project 2", randomTodos);
+let defaultProject = project("Todos", []);
+
+export const allProjects = [defaultProject, randomProject];
+export const allTodos = () => {
+    const at = [];
+    allProjects.forEach(p => [].concat(p.todos));
+    return at;
+};

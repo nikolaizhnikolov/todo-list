@@ -15,11 +15,12 @@ export const todo = function (name, priority, date) {
 
 let randomTodos = [todo("make todos", "high", "today")];
 let randomProject = project("Project 2", randomTodos);
-let defaultProject = project("Todos", []);
 
-export const allProjects = [defaultProject, randomProject];
-export const allTodos = () => {
-    const at = [];
-    allProjects.forEach(p => [].concat(p.todos));
+export const projects = [randomProject];
+export const todos = () => {
+    let at = [];
+    projects.forEach(p => at = at.concat(p.todos));
     return at;
 };
+
+export const defaultProject = project("Todos", todos());

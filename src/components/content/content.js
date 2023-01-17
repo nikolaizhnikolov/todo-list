@@ -1,5 +1,6 @@
 import contentStyle from "./content.css";
 import { projectsComponent } from "../project/project";
+import { todosContainerComponent } from "../todo/todo";
 
 export const content = function () {
     const divWithClass = (c) => {
@@ -10,7 +11,7 @@ export const content = function () {
 
     const content = divWithClass("content");
     content.appendChild(projectsComponent());
-    content.appendChild(divWithClass("todos"));
+    content.appendChild(todosContainerComponent());
 
     return content;
 };

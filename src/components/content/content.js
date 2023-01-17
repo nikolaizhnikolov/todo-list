@@ -1,5 +1,5 @@
 import contentStyle from "./content.css";
-import { getAllProjects } from "../project/project";
+import { projectsComponent } from "../project/project";
 
 export const content = function () {
     const divWithClass = (c) => {
@@ -9,10 +9,7 @@ export const content = function () {
     };
 
     const content = divWithClass("content");
-
-    const projects = divWithClass("projects");
-    getAllProjects().forEach(p => projects.appendChild(p));
-    content.appendChild(projects);
+    content.appendChild(projectsComponent());
     content.appendChild(divWithClass("todos"));
 
     return content;

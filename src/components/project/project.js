@@ -1,13 +1,5 @@
 import style from "./project.css";
-
-const project = function (name, todos) {
-    const p = Object.create(null);
-    p.name = name;
-    p.todos = todos;
-    return p;
-};
-
-const projects = [project("Todos", []), project("Project 2", [])];
+import { projects } from "../../storage";
 
 const projectComponent = function (project) {
     const container = document.createElement("div");
@@ -28,8 +20,21 @@ const projectComponent = function (project) {
     return container;
 };
 
-export const getAllProjects = () => {
-    const projectComponents = [];
-    projects.forEach(p => projectComponents.push(projectComponent(p)));
-    return projectComponents;
+export const projectsComponent = () => {
+    const container = document.createElement("div");
+    container.classList.add("projects");
+    
+    let active = null;
+    projects.forEach((p) => {
+        const component = projectComponent(p);
+        component.onclick = () => {
+            component.classList.add("project--open");
+            active.classList.remove("project--open");
+            active = component;
+        }
+        container.appendChild(component);
+    })
+    active = container.firstChild;
+
+    return container;
 }

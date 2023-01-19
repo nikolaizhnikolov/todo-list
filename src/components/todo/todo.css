@@ -1,3 +1,10 @@
+.todos__header {
+    font-size: 24px;
+    text-decoration: underline;
+    padding: 16px 0;
+    align-self: center;
+}
+
 .todo {
     display: grid;
     grid-template-columns: 30px 5fr 1fr 2fr;
@@ -13,6 +20,10 @@
 .todo__checkbox {
     content: url("./checkbox.png");
     width: 30px;
+}
+
+.todo__checkbox--checked {
+    content: url("./checkboxChecked.png");
 }
 
 .todo__name {

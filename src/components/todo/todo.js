@@ -31,6 +31,11 @@ export const todoComponent = function(todo) {
 export const todosContainerComponent = function() {
     const container = document.createElement("div");
     container.classList.add("todos");    
+
+    const header = document.createElement("div");
+    header.textContent = "Tasks ";
+    header.classList.add("todos__header");
+    container.appendChild(header);
     
     todos().forEach((t) => {
         const component = todoComponent(t);

@@ -45,6 +45,11 @@ export const projectsComponent = () => {
     const container = document.createElement("div");
     container.classList.add("projects");
 
+    const header = document.createElement("div");
+    header.textContent = "Categories";
+    header.classList.add("projects__header");
+    container.appendChild(header);
+
     const defaultProjectComponent = projectComponent(defaultProject);
     toggleActiveProject(defaultProjectComponent);
 

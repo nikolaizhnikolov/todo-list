@@ -1,3 +1,10 @@
+.projects__header {
+    font-size: 24px;
+    text-decoration: underline;
+    padding: 12px 0;
+    align-self: center;
+}
+
 .project {
     display: flex;
     align-items: center;
@@ -5,17 +12,18 @@
     padding: 0.5rem 1rem; 
 }
 
-.project > .logo {
-    content: url('./folder.png');
-    width: 36px;    
-}
-
 .project:hover {
     cursor: pointer;
     background-color: lightgray;
 }
 
-.project--open {
+.project > .logo {
+    content: url('./folder.png');
+    width: 36px;    
+}
+
+.project--open,
+.project--open:hover {
     background-color: gray;
 }
 

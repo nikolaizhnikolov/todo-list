@@ -1,6 +1,7 @@
 import style from "./project.css";
 import { defaultProject, projects } from "../../storage";
-import { todoComponent } from "../todo/todo";
+import { todoComponent, todosHeaderRow } from "../todo/todo";
+import plus from "./plus.png";
 
 let active = null;
 
@@ -33,6 +34,7 @@ const projectComponent = function (project) {
 
 const showProjectTodos = function (todos) {
     const todoElements = [];
+    todoElements.push(todosHeaderRow());
     todos.forEach((pt) => {
         todoElements.push(todoComponent(pt));
     });
@@ -45,10 +47,7 @@ export const projectsComponent = () => {
     const container = document.createElement("div");
     container.classList.add("projects");
 
-    const header = document.createElement("div");
-    header.textContent = "Categories";
-    header.classList.add("projects__header");
-    container.appendChild(header);
+    container.appendChild(projectsHeaderRow());
 
     const defaultProjectComponent = projectComponent(defaultProject);
     toggleActiveProject(defaultProjectComponent);
@@ -56,5 +55,24 @@ export const projectsComponent = () => {
     container.appendChild(defaultProjectComponent);
     projects.forEach((p) => container.appendChild(projectComponent(p)));
 
+    container.appendChild(projectsAddButton());
+
     return container;
 };
+
+const projectsHeaderRow = function() {
+    const header = document.createElement("div");
+    header.textContent = "Categories";
+    header.classList.add("projects__header");
+    return header;
+}
+
+const projectsAddButton = function() {
+    const button = document.createElement("button");
+    button.classList.add("projects__addbutton");
+
+    const img = document.createElement("img");
+    img.src = plus;
+    button.appendChild(img);
+    return button;
+}

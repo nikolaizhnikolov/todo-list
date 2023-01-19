@@ -32,10 +32,7 @@ export const todosContainerComponent = function() {
     const container = document.createElement("div");
     container.classList.add("todos");    
 
-    const header = document.createElement("div");
-    header.textContent = "Tasks";
-    header.classList.add("todos__header");
-    container.appendChild(header);
+    container.appendChild(todosHeaderRow());
     
     todos().forEach((t) => {
         const component = todoComponent(t);
@@ -44,4 +41,11 @@ export const todosContainerComponent = function() {
 
     return container;
 
+}
+
+export const todosHeaderRow = function() {
+    const header = document.createElement("div");
+    header.textContent = "Tasks";
+    header.classList.add("todos__header");
+    return header;
 }

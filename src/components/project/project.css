@@ -5,6 +5,18 @@
     align-self: center;
 }
 
+.projects__addbutton {
+    background: none;
+    border: none;
+    display: flex;
+    justify-items: left;
+}
+
+.projects__addbutton:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
 .project {
     display: flex;
     align-items: center;

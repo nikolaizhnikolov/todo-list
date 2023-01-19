@@ -33,7 +33,7 @@ export const todosContainerComponent = function() {
     container.classList.add("todos");    
 
     const header = document.createElement("div");
-    header.textContent = "Tasks ";
+    header.textContent = "Tasks";
     header.classList.add("todos__header");
     container.appendChild(header);
     
